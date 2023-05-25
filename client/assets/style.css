@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900);
+
+* {
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: initial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Outfit', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    background-image: url(./background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    background-color: #292929;
+}
+
+main {
+    width: 100%;
+    padding: 32px 24px;
+    max-width: 1300px;
+    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main .resultado {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-32px);
+    flex-direction: column;
+    gap: 16px;
+    background-color: #2c2c2c;
+    padding: 24px 40px;
+    border-radius: 16px;
+    border: 1px solid rgb(56, 56, 56);
+    transition: .35s ease;
+}
+
+main .resultado.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+main .resultado p {
+    color: #cacaca;
+    font-weight: 400;
+}
+
+main .resultado p b {
+    color: #cacaca;
+    word-break: break-all;
+    font-weight: 600;
+}
+
+form {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset select {
+    padding: 12px 16px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid #FBFF32;
+    color: #FBFF32;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+form fieldset label {
+    color: rgb(240, 240, 240);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: .75rem;
+}
+
+form fieldset input {
+    padding: 12px 16px;
+    border-radius: 30px;
+    border: 1px solid #3b3b3b;
+    color: #cacaca;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+form button {
+    max-width: max-content;
+    background-color: #FBFF32;
+    color: #292929;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.85rem 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+}
